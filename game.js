@@ -10,7 +10,15 @@ console.log(randomNumber);
 
 //* CheckBtn basildiğinda kontrolleri yap
 document.querySelector(".check-btn").addEventListener("click", () => {
-  const guessInput = document.querySelector(".guess-input");
+  const guessInput = Number(document.querySelector(".guess-input").value);
+  const msg = document.querySelector(".msg");
+  //! eger input girilmediyse uyari ver
+
+  if (!guessInput) {
+    msg.innerText = "Please Enter a Number";
+  } else if (randomNumber === guessInput) {
+    msg.innerText = "Congrats You Won";
+  }
 });
 
 //! eger rastgele sayi ==input.value
