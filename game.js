@@ -102,3 +102,5 @@ document.querySelector(".guess-input").addEventListener("keydown", (e) => {
 //? Uzgunuz kaybetiniz.
 
 //* againBtn basildiginda kontrolleri yap
+
+// This hurts
