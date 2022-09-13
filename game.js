@@ -48,6 +48,19 @@ document.querySelector(".check-btn").addEventListener("click", () => {
   }
 });
 
+//* again basildiginda oyunu baslangic degerlerine kur
+
+document.querySelector(".again-btn").addEventListener("click", () => {
+  score = 10;
+  document.querySelector(".score").textContent = score;
+  const randomNumber = Math.round(Math.random() * 100);
+  document.querySelector(".secret-number").textContent = randomNumber;
+  console.log(randomNumber);
+  document.querySelector(".check-btn").dsabled = false;
+  document.querySelector("body").classList.remove(".bg-success", ".bg-danger");
+  document.querySelector(".guess-input").value = "";
+});
+
 //? tebrikler bildiniz.
 //? background = green
 //? eger score > topScore
